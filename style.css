@@ -1,0 +1,343 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: "Amira Semi Bd";
+	font-display: block;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 1.2;
+	color: rgb(255,110,0);
+}
+
+main {
+	width: 100%;
+	max-width: 900px;
+	margin: auto;
+	margin-bottom: 20vh;
+}
+
+h1, h2, p {
+	font-size: 1em;
+	font-weight: normal;
+	margin-bottom: 1em;
+}
+
+p.sub, ul{
+	font-size: .75em;
+	line-height: 1.4
+}
+
+
+li {
+	margin-bottom: 1rem;
+	list-style-type: none;
+	margin-left: 1.25rem;
+}
+li::before{
+	content: "* ";
+	margin-left: -1.25rem;
+}
+.teal{
+	color: rgb(0,140,140);
+}
+
+section {
+	width: 75%;
+	padding: 2em 0em;
+}
+section:first-of-type {
+	padding-top: 3em;
+}
+section:nth-of-type(2n) {
+	margin-left: 25%;
+}
+
+section#form {
+	width: 100%;
+	margin-left: 0;
+	padding-bottom: 3em;
+}
+a {
+	color: rgb(255,110,0);
+	text-decoration: none;
+	border-bottom: 2px solid rgb(255,110,0);
+}
+	
+
+.interlude{
+	position: relative;
+	height: 300px;
+}
+
+.wheel {
+	width: 180px;
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin-left: -90px;
+	top: 50px;
+	mix-blend-mode: multiply;
+}
+.a{
+	fill:none;
+	stroke-miterlimit:10;
+	stroke-width:6px;
+}
+
+.svg_orange .a{
+	stroke: rgb(255,110,0);
+}
+
+.svg_green {
+	animation: spin 50s linear infinite;
+}
+.svg_green .a{
+	stroke: rgb(0,140,140);
+}
+
+
+
+@keyframes spin{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+
+
+.responses p{
+	display: none;
+	background: rgba(255,110,0, 0.1);
+	padding: 1rem;
+}
+
+.field {
+	margin-bottom: 1em;
+	position: relative;
+}
+
+.hidden{
+	display: none;
+}
+
+label{
+	font-size: 18px;
+}
+
+input, textarea, .select-field ul{
+	display: block;
+	width: 100%;
+	font-size: .75em;
+	font-family: "Amira Semi Bd";
+	color: rgb(0,140,140);
+	padding: 0px 18px 9px 0px;
+	margin: 0;
+	border: 0;
+	border-radius: 0;
+	border-bottom: 2px solid rgb(255,110,0);
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background: #fff;
+	transition: border-color .3s ease-in-out, height .1s linear;
+}
+
+input:focus, textarea:focus, .select-field ul:focus, button:focus {
+	outline: none;
+	border-color: rgb(0,140,140);
+	box-shadow: none;
+	background: #fff;
+}
+
+
+input:hover, textarea:hover, .select-field ul:hover{
+    border-color: rgb(0,140,140);
+    background: rgba(255,255,255,0.7);
+}
+
+.select-field label::after{
+	content: "\25bc";
+	position: relative;
+	right: -5px;
+	top: -1px;
+	font-size: 15px;
+}
+
+.select-field:hover{
+	cursor: pointer;
+}
+
+.select-field:hover::after{
+	color: rgb(0,140,140);
+}
+
+
+.select-field ul{
+	list-style-type: none;
+	height: 50px;
+	overflow: hidden;
+}
+
+.select-field li::before{
+	content: none;
+}
+
+.select-field li.option{
+	display: none;
+	margin-left: 0;
+	margin-bottom: 18px;
+}
+
+.select-field li.option:hover{
+	color: rgb(255,110,0);
+}
+
+
+.select-field.open ul{
+	height: 100px;
+}
+
+.select-field.open li.option {
+    margin-bottom: 9px;
+    display: block;
+ }
+
+ .select-field li.option.selected{
+ 	display: block;
+ }
+
+select::-ms-expand {
+    display: none;
+}
+
+
+button:hover{
+	cursor: pointer;
+}
+
+textarea{
+	resize: vertical;
+	height: 8em;
+}
+
+button{
+	display: block;
+	width: 100%;
+	height: 70px;
+	font-size: .75em;
+	margin-top: 3em;
+	font-family: "Amira Semi Bd";
+	background: #fff;
+	color: rgb(255,110,0);
+	border: 2px solid rgb(255,110,0);
+	appearance: none;
+	-webkit-appearance: none;
+	transition: color .3s ease-in-out, background-color .3s ease-in-out;
+}
+
+
+button:hover{
+	color: #fff;
+	background: rgba(255,110,0,1);
+}
+
+button img{
+	height: 100%;
+}
+
+.button-text{
+	padding: 18px;
+}
+
+
+.img{
+	background: rgb(0,140,140);
+	width: 500px;
+	/*background-size: cover;
+	background-repeat: no-repeat;*/
+	/*position: relative;*/
+	margin-bottom: 5rem;
+}
+
+img {
+	width: 100%;
+	max-height: 800px;
+	mix-blend-mode: screen;
+	display: block;
+}
+
+.img{
+	transform: rotate(3deg);
+}
+
+.img:nth-of-type(2n) {
+	margin-left: 50%;
+	background: rgb(255,110,0);
+	transform: rotate(-3deg);
+}
+/*
+.images .img:before {
+  background-color: rgb(255,110,0);
+  content: '';
+  display: block;
+  width:100%;
+  height:100%;
+  mix-blend-mode: darken;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+*/
+/*.images .img::after {
+  background-color: rgb(0,140,140);
+  content: '';
+  display: block;
+  width:100%;
+  height:100%;
+  mix-blend-mode: lighten;
+  position: absolute;
+  top: 0;
+  left: 0;
+}*/
+
+
+@media screen and (max-width: 900px){
+	body{
+		font-size: 33px;
+	}
+	main {
+		width: 90%;
+	}
+	.wheel {
+		width: 140px;
+		top: 40px;
+		margin-left: -70px;
+	}
+	section, section:nth-of-type(2n){
+		width: 100%;
+		margin: 0;
+	}
+
+	.form{
+		height: 90vh;
+	}
+	.info{
+		margin-left: 0;
+	}
+
+	.img{
+		width: 95%;
+	}
+	.img:nth-of-type(2n){
+		margin-left: 0;
+	}
+}
